@@ -14,7 +14,7 @@ def salvador():
 @app.route("/random")
 def random():
     
-    ret_val = "your random number is: " + Str(randrange(100))
+    ret_val = "your random number is: " + str(randrange(100))
     return ret_val
 
 if __name__ == '__main__':
