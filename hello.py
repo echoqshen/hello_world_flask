@@ -14,15 +14,15 @@ def salvador():
     return "Hello, Salvador"
 
 @app.route("/user")
-def salvador():
-    user = os.environ['user']
-    msg = "user: " + user
+def users():
+    my_user = os.environ['user']
+    msg = "user: " + my_user
     return msg
 
 @app.route("/pass")
-def salvador():
-    pass = os.environ['pass']
-    msg = "pass: " + pass
+def passes():
+    my_pass = os.environ['pass']
+    msg = "pass: " + my_pass
     return msg
 
 @app.route("/random")
