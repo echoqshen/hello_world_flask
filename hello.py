@@ -21,6 +21,16 @@ def users():
     msg = "user: " + my_user
     return msg
 
+@app.route("/mongo_data")
+def mongo_data():
+
+    client = MongoClient("mongodb+srv://user:project1@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority")
+    db = client.project1
+    collection = db.project1
+    query_mongo_df  = pd.DataFrame(list(collection.find()))
+    first_20 = query_mongo_df.head(20)
+    return first_20.to_html()
+
 @app.route("/pass")
 def passes():
     my_pass = os.environ['pass']
