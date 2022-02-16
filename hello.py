@@ -13,6 +13,18 @@ def hello_world():
 def salvador():
     return "Hello, Salvador"
 
+@app.route("/user")
+def salvador():
+    user = os.environ['user']
+    msg = "user: " + user
+    return msg
+
+@app.route("/pass")
+def salvador():
+    pass = os.environ['pass']
+    msg = "pass: " + pass
+    return msg
+
 @app.route("/random")
 def random():
     
