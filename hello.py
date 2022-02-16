@@ -1,6 +1,8 @@
 from flask import Flask
+from flask import jsonify
 import pandas as pd
 import random
+import os
 from random import randrange
 from pymongo import MongoClient
 app = Flask(__name__)
@@ -24,6 +26,13 @@ def passes():
     my_pass = os.environ['pass']
     msg = "pass: " + my_pass
     return msg
+
+@app.route("/vars")
+def vars():
+    my_vars = os.environ
+    my_vars_dict = dict(my_vars)
+    return jsonify(my_vars_dict)
+
 
 @app.route("/random")
 def random():
