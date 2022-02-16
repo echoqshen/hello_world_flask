@@ -24,7 +24,7 @@ def users():
 @app.route("/mongo_data")
 def mongo_data():
 
-    client = MongoClient("mongodb+srv://user:project1@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority")
+    client = MongoClient("")
     db = client.project1
     collection = db.project1
     query_mongo_df  = pd.DataFrame(list(collection.find()))
