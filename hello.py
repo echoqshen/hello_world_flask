@@ -27,8 +27,7 @@ def mongo_data():
     
     my_pass = os.environ['pass']
     user_name = os.environ['user']
-    connection_string = "mongodb+srv://" + user_name + ":" + my_pass + "@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority"
-    return(connection_string)
+    connection_string = "mongodb+srv://" + user_name + ":" + my_pass + "@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority
 
 
     try:
