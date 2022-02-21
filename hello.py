@@ -23,11 +23,14 @@ def users():
 
 @app.route("/mongo_data")
 def mongo_data():
-
-    pass = os.environ['pass']
-    user_name = os.environ['user']
-    connection_string = "mongodb+srv://" + user_name + ":" + pass + "@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority"
     
+    
+    my_pass = os.environ['pass']
+    user_name = os.environ['user']
+    connection_string = "mongodb+srv://" + user_name + ":" + my_pass + "@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority"
+
+
+
     client = MongoClient(connection_string)
     db = client.project1
     collection = db.project1
