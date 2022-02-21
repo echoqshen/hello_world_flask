@@ -28,15 +28,17 @@ def mongo_data():
     my_pass = os.environ['pass']
     user_name = os.environ['user']
     connection_string = "mongodb+srv://" + user_name + ":" + my_pass + "@project1.q26cg.mongodb.net/project1?retryWrites=true&w=majority"
+    return(connection_string)
 
 
-
+    '''
     client = MongoClient(connection_string)
     db = client.project1
     collection = db.project1
     query_mongo_df  = pd.DataFrame(list(collection.find()))
     first_20 = query_mongo_df.head(20)
     return first_20.to_html()
+    '''
 
 @app.route("/pass")
 def passes():
