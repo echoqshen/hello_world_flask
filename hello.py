@@ -31,14 +31,16 @@ def mongo_data():
     return(connection_string)
 
 
-    '''
+    try:
     client = MongoClient(connection_string)
     db = client.project1
     collection = db.project1
     query_mongo_df  = pd.DataFrame(list(collection.find()))
     first_20 = query_mongo_df.head(20)
+    except exception as e:
+        return("error" + str(e))
     return first_20.to_html()
-    '''
+    
 
 @app.route("/pass")
 def passes():
