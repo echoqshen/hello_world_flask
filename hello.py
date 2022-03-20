@@ -5,7 +5,14 @@ import random
 import os
 from random import randrange
 from pymongo import MongoClient
+from flask import render_template
 app = Flask(__name__)
+
+
+@app.route('/graph')
+def grapher():
+  
+    return render_template('Event_Impact.html')
 
 @app.route('/')
 def hello_world():
