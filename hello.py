@@ -11,18 +11,13 @@ app = Flask(__name__)
 
 @app.route('/graph')
 def grapher():
-  
     return render_template('Event_Impact.html')
 
 @app.route('/')
 def hello_world():
     return 'Hello Booboo !'
 
-@app.route("/graph")
-def graph():
-#     return "Hello, graph"
-    event = "Event Impact: " + graph)
-    return event
+
 
 @app.route("/user")
 def users():
