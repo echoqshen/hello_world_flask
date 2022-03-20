@@ -11,9 +11,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello Booboo !'
 
-@app.route("/salvador")
-def salvador():
-    return "Hello, Salvador"
+@app.route("/grapy")
+def graph():
+    return "Hello, graph"
 
 @app.route("/user")
 def users():
