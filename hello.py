@@ -13,7 +13,9 @@ def hello_world():
 
 @app.route("/graph")
 def graph():
-    return "Hello, graph"
+#     return "Hello, graph"
+    event = "Event Impact: " + graph)
+    return event
 
 @app.route("/user")
 def users():
